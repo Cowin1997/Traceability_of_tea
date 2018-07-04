@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+/*web background*/
+.container {
+	display: table;
+	height: 100%;
+}
+</style>
+<title>登陆成功</title>
+</head>
+<body>
+
+   <table class="table"  >
+   <thead>
+    <tr><td colspan="2">欢迎</td></tr>
+   </thead>
+   	<tr><td>欢迎登陆，您的信息如下：</td></tr>
+   <tr><td>用户名：</td><td th:text="${retailer.userName}"></td></tr>
+   <tr><td>E-Mail:</td><td th:text="${retailer.email}"></td></tr>
+   <tr><td>零售商名称:</td><td th:text="${retailer.retailername}" ></td></tr>
+    <tr><td>零售商地址:</td><td th:text="${retailer.retaileraddr}" ></td></tr>
+   </table>
+ 
+   
+<a th:href="@{/retailer/retailer_prodin}+'?name='+${retailer.userName}">产品进货||</a> 
+<a th:href="@{/retailer/retailer_pro_info}+'?name='+${retailer.userName}">查看我的仓库||</a>
+<a th:href="@{/}">返回主页</a>
+</body>
+</html>
+
+
+
+
+

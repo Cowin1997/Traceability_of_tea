@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+/*web background*/
+.container {
+	display: table;
+	height: 100%;
+}
+</style>
+<title>信息查看</title>
+</head>
+<body>
+	<table border="1">
+			<tr>
+			
+		
+			<th>产品编号</th>
+			<th>制茶师:</th>
+			<th>商品产家</th>
+			<th>商品地址</th>
+			<th>商品名字</th>
+			<th>商品状态</th>
+			<th>商品售出日期</th>
+			</tr>
+			<tr th:each="pro:${prolist}">
+				
+				<td th:text="${pro.proid}">产品编号</td>
+				<td th:text="${pro.authord}">制茶师:</td>
+				<td th:text="${pro.factoryname}">商品产家</td>
+				<td th:text="${pro.factoryaddr}">商品地址</td>
+				<td th:text="${pro.proname}">商品名字</td>
+				<td th:text="${pro.status}">商品状态</td>
+				<td th:text="${pro.date}">商品售出日期</td>
+				<td th:if="${pro.status} eq '未出售'"><a th:href="@{/factory/factory_production_revise}+'?name='+${name}+'&id='+${pro.proid}">产品信息修改  </a></td>
+			</tr>
+			</table>
+<a th:href="@{/factory/factory_production_commit}+'?name='+${name}">产品信息录入  ||</a>
+<a th:href="@{/factory/factory_production_setail}+'?name='+${name}">产品信息查看 || </a>
+<a th:href="@{/factory/}+${name}">返回主页 </a>
+</body>
+</html>
+
+
+
+
+

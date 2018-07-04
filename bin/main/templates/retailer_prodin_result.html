@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+/*web background*/
+.container {
+	display: table;
+	height: 100%;
+}
+</style>
+<title>进货结果</title>
+</head>
+<body>
+<table>
+<tr><td>您输入的18位进货编码为:</td><td th:text="${inquiry.inquiryid}"></td></tr>
+
+   <thead>
+    <tr><td colspan="2"></td></tr>
+   </thead>
+  
+
+   <tr><td>产品名：</td><td th:text="${production.proname}"></td></tr>
+   <tr><td>制茶师:</td><td th:text="${production.authord}"></td></tr>
+   <tr><td>厂家名称:</td><td th:text="${production.factoryname}"></td></tr>
+    <tr><td>厂家地址:</td><td th:text="${production.factoryaddr}"></td></tr>
+    <tr><td>生产日期:</td><td th:text="${production.date}"></td></tr>
+    <tr><td>厂家产品售出状态：</td><td th:text="${production.status}"></td></tr>
+    <tr><td>所属大包编号为：</td><td th:text="${production.proid}"></td></tr>
+  
+
+  
+
+
+</table>
+	<a th:href="@{/retailer/retailer_prodin}+'?name='+${name}">返回进货</a>
+	<a th:href="@{/retailer/retailer_pro_info}+'?name='+${name}">查看我的仓库</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

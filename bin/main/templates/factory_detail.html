@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+/*web background*/
+.container {
+	display: table;
+	height: 100%;
+}
+</style>
+<title>登陆成功</title>
+</head>
+<body>
+<div class="container col-md-12">
+   <table class="table">
+   <thead>
+    <tr><td colspan="2">欢迎</td></tr>
+   </thead>
+   <tr><td>用户名：</td><td th:text="${factory.userName}"></td></tr>
+   <tr><td>E-Mail:</td><td th:text="${factory.email}"></td></tr>
+   <tr><td>厂家名称:</td><td th:text="${factory.factoryname}"></td></tr>
+    <tr><td>厂家地址:</td><td th:text="${factory.factoryaddr}"></td></tr>
+   </table>
+<a th:href="@{/factory/factory_production_commit}+'?name='+${factory.userName}">产品信息录入</a>
+<a th:href="@{/factory/factory_production_setail}+'?name='+${factory.userName}">产品信息查看</a>
+<a th:href="@{/}">返回主页</a>
+</div>
+
+</body>
+</html>
+
+
+
+
+

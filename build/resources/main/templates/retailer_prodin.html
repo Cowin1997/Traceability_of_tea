@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+/*web background*/
+.container {
+	display: table;
+	height: 100%;
+}
+</style>
+<title>零售商进货系统</title>
+</head>
+<body>
+<form class="form-horizontal" role="form" action="/retailer/retailer_prodin_result"
+				th:action="@{/retailer/retailer_prodin_result}" th:object="${inquiry}" method="post"
+				th:method="post" enctype="multipart/form-data">
+<table>
+<tr><td>请输入18位进货号码：<input type="text" placeholder="请输入进货编码" id="inquiryid" th:field="*{inquiryid}" ></td></tr>
+
+
+
+<tr><td><input class="btn btn-block" type="submit" value="确认进货" /></td></tr>
+
+
+</table>
+</form>
+	
+</body>
+</html>
+
+
+
+
+

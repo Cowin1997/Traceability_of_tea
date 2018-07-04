@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+/*web background*/
+.container {
+	display: table;
+	height: 100%;
+}
+</style>
+<title>信息查看</title>
+</head>
+<body>
+<div class="container col-md-12">
+   <table class="table">
+   <thead>
+    <tr><td colspan="2"></td></tr>
+   </thead>
+  
+
+   <tr><td>产品名：</td><td th:text="${production.proname}"></td></tr>
+      <tr><td>产品序列号:</td><td th:text="${production.proid}"></td></tr>
+   <tr><td>制茶师:</td><td th:text="${production.authord}"></td></tr>
+   <tr><td>厂家名称:</td><td th:text="${production.factoryname}"></td></tr>
+    <tr><td>厂家地址:</td><td th:text="${production.factoryaddr}"></td></tr>
+       <tr><td>产品状态:</td><td th:text="${production.status}"></td></tr>
+          <tr><td>上架日期:</td><td th:text="${production.date}"></td></tr>
+   <!--  <img src="<%=request.getContextPath()%>/static/<c:out value="${production.proname}"/>.jpeg" class="img-rounded"> -->
+	<tr><td>产品图片:</td><td><img th:src="'/'+${production.proname}+'.jpeg'"></td></tr>
+   </table>
+<a th:href="@{/factory/factory_production_commit}+'?name='+${production.username}">产品信息录入 |</a>
+<a th:href="@{/factory/factory_production_setail}+'?name='+${production.username}">	产品信息查看  </a> 
+</div>
+</body>
+</html>
+
+
+
+
+

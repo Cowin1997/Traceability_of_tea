@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<title>欢迎</title>
+
+
+</head>
+<body>
+	<H1>茶叶溯源系统</H1>
+    <a th:href="@{/factory/factory_login}">厂家登陆</a>
+	<a th:href="@{/factory/factory_register}">厂家注册</a>
+	<a th:href="@{/customer/inquiry}">消费者查询</a>
+	<a th:href="@{/retailer/retailer_register}">零售商注册</a>
+	<a th:href="@{/retailer/retailer_login}">零售商登陆</a>
+</body>
+</html>

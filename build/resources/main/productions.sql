@@ -1,0 +1,53 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : factorylogin
+Source Server Version : 50505
+Source Host           : localhost:3306
+Source Database       : test
+
+Target Server Type    : MYSQL
+Target Server Version : 50505
+File Encoding         : 65001
+
+Date: 2018-07-04 12:43:04
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for productions
+-- ----------------------------
+DROP TABLE IF EXISTS `productions`;
+CREATE TABLE `productions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `proid` varchar(255) NOT NULL,
+  `detaiid` varchar(255) NOT NULL,
+  `status` varchar(5) NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1041 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of productions
+-- ----------------------------
+INSERT INTO `productions` VALUES ('1021', '201806181625104810', '201806181625106159', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1022', '201806181625104810', '201806181625106838', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1023', '201806181625104810', '201806181625105903', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1024', '201806181625104810', '201806181625101703', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1025', '201806181625104810', '201806181625107558', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1026', '201806181625104810', '201806181625100197', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1027', '201806181625104810', '201806181625109857', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1028', '201806181625104810', '201806181625106398', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1029', '201806181625104810', '201806181625104759', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1030', '201806181625104810', '201806181625109188', '已出售', '2018-06-18');
+INSERT INTO `productions` VALUES ('1031', '201806191657304038', '201806191657300977', '未出售', '2018-06-19');
+INSERT INTO `productions` VALUES ('1032', '201806191657304038', '201806191657306607', '未出售', '2018-06-19');
+INSERT INTO `productions` VALUES ('1033', '201806191657304038', '201806191657305389', '未出售', '2018-06-19');
+INSERT INTO `productions` VALUES ('1034', '201806191657304038', '', '未出售', '2018-06-19');
+INSERT INTO `productions` VALUES ('1035', '201806191657304038', '201806191657309590', '未出售', '2018-06-19');
+INSERT INTO `productions` VALUES ('1036', '201806191657304038', '201806191657301355', '未出售', '2018-06-19');
+INSERT INTO `productions` VALUES ('1037', '201806191657304038', '201806191657308965', '未出售', '2018-06-19');
+INSERT INTO `productions` VALUES ('1038', '201806191657304038', '201806191657300192', '未出售', '2018-06-19');
+INSERT INTO `productions` VALUES ('1039', '201806191657304038', '201806191657308605', '未出售', '2018-06-19');
+INSERT INTO `productions` VALUES ('1040', '201806191657304038', '201806191657316236', '未出售', '2018-06-19');

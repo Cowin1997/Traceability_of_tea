@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+/*web background*/
+.container {
+	display: table;
+	height: 100%;
+}
+</style>
+<title>消费者查询</title>
+</head>
+<body>
+<form class="form-horizontal" role="form" action="/customer/inquiry_result"
+				th:action="@{/customer/inquiry_result}" th:object="${inquiry}" method="post"
+				th:method="post" enctype="multipart/form-data">
+<table>
+<tr><td>请输入18位查询号码:<input type="text" placeholder="请输入18位小包的查询编码" id="inquiryid" th:field="*{inquiryid}" ></td></tr>
+
+
+
+<tr><td><input class="btn btn-block" type="submit" value="查询" /></td></tr>
+
+
+</table>
+</form>
+<a th:href="@{/}">返回主页</a>	
+</body>
+</html>
+
+
+
+
+
